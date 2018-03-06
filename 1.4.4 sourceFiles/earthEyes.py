@@ -1,8 +1,3 @@
-'''earthEyes demonstrates PIL.Image.paste()
-Unpublished work (c)2013 Project Lead The Way
-CSE Activity 1.3.7 PIL API
-Version 9/10/2013 '''
-
 import PIL
 import matplotlib.pyplot as plt
 import os.path              
