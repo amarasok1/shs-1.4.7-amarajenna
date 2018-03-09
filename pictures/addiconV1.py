@@ -34,6 +34,6 @@ axes2[1].imshow(yin_small)
 # Uses alpha from mask
 student_img.paste(yin_small, (150,200), mask=yin_small) 
 # Display
-fig3, axes3 = plt.subplots(1, 2)
+fig3, axes3 = plt.subplots(1)
 axes3[0].imshow(student_img, interpolation='none')
 fig3.show()

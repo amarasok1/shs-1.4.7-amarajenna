@@ -25,9 +25,9 @@ def frame(original_image, color, percent_of_side):
     drawing_layer = PIL.ImageDraw.Draw(frame_mask)
     
     # Draw four rectangles to fill frame area with alpha=255
-    drawing_layer.rectangle((0, 0, width, thickness), fill=(r, g, b, 255)) #top
+    drawing_layer.rectangle((0, 0, width, thickness*2), fill=(r, g, b, 255)) #top
     drawing_layer.rectangle((0, 0, thickness, height), fill=(r, g, b, 255)) # left
-    drawing_layer.rectangle((0, height, width, height-thickness), fill=(r, g, b, 255)) # bottom
+    drawing_layer.rectangle((0, height, width, height-2*thickness), fill=(r, g, b, 255)) # bottom
     drawing_layer.rectangle((width, 0, width-thickness, height), fill=(r, g, b, 255)) #right
     
     
@@ -63,7 +63,7 @@ def get_images(directory=None):
             pass # do nothing with errors tying to open non-images
     return image_list, file_list
 
-def frame_all_images(directory=None, color=(255,0,0), width=0.10):
+def frame_all_images(directory=None, color=(102,255,204), width=0.05):
     """ Saves a modfied version of each image in directory.
     
     Uses current directory if no directory is specified. 
